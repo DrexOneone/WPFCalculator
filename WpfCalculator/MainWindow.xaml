@@ -39,7 +39,7 @@
         <Button Name="Buttonsubtract" Grid.Column="3" Content="-" Grid.Row="2" Click="Buttonsubtract_Click"/>
         <Button Name="Buttonadd" Grid.Column="3" Content="+" Grid.Row="3" Click="Buttonadd_Click"/>
         <Button Name="Buttonequals" Grid.Column="2" Content="=" Grid.Row="4" Grid.ColumnSpan="2" Click="Buttonequals_Click"/>
-        <TextBlock Name="TextBlockOutput" HorizontalAlignment="Center" Text="Output" Grid.Column="0" Grid.Row="0" Grid.ColumnSpan="4" Margin="0,16,0,17" Width="363" TextAlignment="Right" />
+        <TextBlock Name="TextBlockOutput" HorizontalAlignment="Center" Text="{Binding Entries}" Grid.Column="0" Grid.Row="0" Grid.ColumnSpan="4" Margin="0,16,0,17" Width="363" TextAlignment="Right" />
 
     </Grid>
 </Window>

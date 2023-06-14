@@ -20,82 +20,105 @@ namespace WpfCalculator
     /// </summary>
     public partial class MainWindow : Window
     {
-        public string Entries { get; set; }
-
+        private string _entries;
+     
+        public string Entries
+        {
+            get
+            {
+                return _entries;
+            }
+            set
+            {
+                _entries = value;
+                UpdateText();
+            }
+        }
+        
         public MainWindow()
         {
+            DataContext = this;
+            
             InitializeComponent();
         }
-
+        
         private void Button1_Click(object sender, RoutedEventArgs e)
         {
-         Entries += '1' 
+
+            Entries += '1'; 
+           
         }
         
         private void Button0_Click(object sender, RoutedEventArgs e)
         {
-
+            Entries += '0';
         }
 
         private void Button2_Click(object sender, RoutedEventArgs e)
         {
-
+            Entries += '2';
         }
 
         private void Button3_Click(object sender, RoutedEventArgs e)
         {
-
+            Entries += '3';
         }
 
         private void Button4_Click(object sender, RoutedEventArgs e)
         {
-
+            Entries += '4';
         }
 
         private void Button5_Click(object sender, RoutedEventArgs e)
         {
-
+            Entries += '5';
         }
 
         private void Button6_Click(object sender, RoutedEventArgs e)
         {
-
+            Entries += '6';
         }
 
         private void Button7_Click(object sender, RoutedEventArgs e)
         {
-
+            Entries += '7';
         }
 
         private void Button8_Click(object sender, RoutedEventArgs e)
         {
-
+            Entries += '8';
         }
 
         private void Button9_Click(object sender, RoutedEventArgs e)
         {
-
+            Entries += '9';
         }
 
         private void ButtonAC_Click(object sender, RoutedEventArgs e)
         {
-
+            Entries = string.Empty;
         }
 
         private void Buttonsubtract_Click(object sender, RoutedEventArgs e)
         {
-
+            Entries += '-';
         }
 
         private void Buttonadd_Click(object sender, RoutedEventArgs e)
         {
-
+            Entries += '+';
         }
 
         private void Buttonequals_Click(object sender, RoutedEventArgs e)
         {
+            
 
+       
         }
-  
+        
+        private void UpdateText()
+        {
+            TextBlockOutput.Text = Entries;
+        }
     }
 }
